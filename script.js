@@ -79,14 +79,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
-/* ── FILTRE MENU ── */
-function filterMenu(cat, btn) {
-  document.querySelectorAll(".tab-btn").forEach(function(b) { b.classList.remove("active"); });
-  btn.classList.add("active");
-  document.querySelectorAll(".menu-group").forEach(function(group) {
-    group.style.display = (cat === "all" || group.dataset.cat === cat) ? "block" : "none";
-  });
-}
+/* Le filtrage des onglets de la carte est géré par i18n.js
+   (les onglets et fiches sont générés dynamiquement en FR/DE). */
 
 /* ── FORMULAIRE CONTACT ── */
 function handleSubmit(e) {
